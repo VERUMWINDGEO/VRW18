@@ -392,6 +392,28 @@
             } else if (map.getZoom() > 19 || map.getZoom() < 2) {
                 map.removeLayer(layer_ALKISParzellarkarteUmringGelb_4);
             }
+        var overlaysTree = [
+            {label: '<img src="legend/VRW18WegetemporreunddauerhafteWegeshp_10.png" /> VRW18 Wege/temporäre und dauerhafte Wege.shp', layer: layer_VRW18WegetemporreunddauerhafteWegeshp_10},
+            {label: '<img src="legend/VRW18Mittelpunkt_9.png" /> VRW18 Mittelpunkt', layer: layer_VRW18Mittelpunkt_9},
+            {label: '<img src="legend/VRW18MittelpunktundRotorVRW18Fundamentshp_8.png" /> VRW18 Mittelpunkt und Rotor/VRW18 Fundament.shp', layer: layer_VRW18MittelpunktundRotorVRW18Fundamentshp_8},
+            {label: '<img src="legend/VRW18a_KranstellflchenVRW18a_Kranstellflchenshp_7.png" /> VRW18a_Kranstellflächen/VRW18a_Kranstellflächen.shp', layer: layer_VRW18a_KranstellflchenVRW18a_Kranstellflchenshp_7},
+            {label: '<img src="legend/VRW18a_RodungsbereicheVRW18a_Rodungsbereicheshp_6.png" /> VRW18a_Rodungsbereiche/VRW18a_Rodungsbereiche.shp', layer: layer_VRW18a_RodungsbereicheVRW18a_Rodungsbereicheshp_6},
+            {label: "Höhenlinien (braun)", layer: layer_Hhenlinienbraun_5},
+            {label: "ALKIS-Parzellarkarte (Umring, Gelb)", layer: layer_ALKISParzellarkarteUmringGelb_4},
+            {label: "Beschriftung", layer: layer_Beschriftung_3},
+            {label: "Flurstücke", layer: layer_Flurstcke_2},
+            {label: "OpenStreetMap", layer: layer_OpenStreetMap_1},
+            {label: "Bing Luftbild", layer: layer_BingLuftbild_0},]
+        var lay = L.control.layers.tree(null, overlaysTree,{
+            //namedToggle: true,
+            //selectorBack: false,
+            //closedSymbol: '&#8862; &#x1f5c0;',
+            //openedSymbol: '&#8863; &#x1f5c1;',
+            //collapseAll: 'Collapse all',
+            //expandAll: 'Expand all',
+            collapsed: true,
+        });
+        lay.addTo(map);
         setBounds();
         </script>        
     </body>
